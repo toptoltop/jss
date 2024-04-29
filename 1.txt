@@ -1,0 +1,45 @@
+let catalogue = [
+    {
+        genre: "Grozine literatura",
+        books: [
+            { ISBN: "GR1234I", releaseYear: 2012, title:'Supynes' , pages: 450 },
+            { ISBN: "GR1234J", releaseYear: 2006, title:'Ant slaito' , pages: 700 },
+            { ISBN: "GR1234K", releaseYear: 2024, title:'Uz senus gerus' , pages: 545 },
+            { ISBN: 'GR1234L', releaseYear: 1354, title:'Batuotas katinas', pages: 600}
+        ]
+    },
+    {
+        genre: "Fantastika",
+        books: [
+            { ISBN: "GR1234E", releaseYear: 2012, title:'Geltona' , pages: 198 },
+            { ISBN: "GR1234F", releaseYear: 2024, title:'Pilkumas' , pages: 999 },
+            { ISBN: "GR1234G", releaseYear: 1952, title:'Saule' , pages: 399 },
+            { ISBN: 'GR1234H', releaseYear: 2006, title: 'Zalgiris', pages: 541}
+        ]
+    },
+    {
+        genre: 'Romanai',
+        books: [
+            {ISBN: 'GR1234A', releaseYear: 2024, title: 'Be kepures', pages: 451},
+            {ISBN: 'GR1234B', releaseYear: 2022, title: 'Su kepure', pages: 458},
+            {ISBN: 'GR1234C', releaseYear: 2015, title: 'Kepure', pages: 307},
+            {ISBN: 'GR1234D', releaseYear: 1999, title: 'Skrybele', pages: 284},
+        ]
+    }
+];
+
+
+for(let category of catalogue){
+    console.log(`${category.genre}(${category.books.length} knygos):`)
+
+    for(let book of category.books){
+        let releaseYearNote = "";
+        if(book.releaseYear === 2024) {
+            releaseYearNote = "nauja knyga";
+        }
+        console.log(`\tISBN: ${book.ISBN}`);
+        console.log(`\tIsleidimo metai: ${book.releaseYear} ${releaseYearNote}`);
+        console.log(`\tPavadinimas: ${book.title}`);
+        console.log(`\tPuslapiai: ${book.pages}`);
+    }
+}

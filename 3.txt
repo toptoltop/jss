@@ -1,0 +1,11 @@
+let number = prompt('Iveskite skaiciu:');
+
+function checkNumber(number){
+    return number >= 40 && number <=10000;
+}
+
+if (checkNumber(number)){
+    console.log(`${number} egzistuoja tarp 40 ir 10000`);
+} else {
+    console.log(`${number} skaicius nera tarp 40 ir 10000`);
+}

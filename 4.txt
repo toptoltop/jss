@@ -1,0 +1,16 @@
+let sentence = 'Paziurekime ar kazkas yra eiluteje';
+
+function modifySentence(sentence){
+    let sentenceArray = sentence.split('');
+    if (sentenceArray[0] === 'P'){
+        sentenceArray.shift();
+    }
+    if (sentenceArray[sentenceArray.length -1] === 'P'){
+        sentenceArray.pop();
+    }
+    let modifiedSentence = sentenceArray.join('');
+    return modifiedSentence !== '' ? modifiedSentence : sentence;
+}
+
+let modified = modifySentence(sentence);
+console.log(modified);

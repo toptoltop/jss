@@ -1,0 +1,14 @@
+function isItA(totalPoints, finalExam = false) {
+  if (finalExam && totalPoints >= 89 && totalPoints <= 100) {
+    return true;
+  } else if (!finalExam && totalPoints >= 90) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isItA(95, true));
+console.log(isItA(88));
+console.log(isItA(90));
+
